@@ -22,6 +22,7 @@ if __name__ == '__main__':
     repository = NBAAPIPlayersRepository(api_client)
     use_case = GetPlayersUseCase(repository)
 
+    # Extract
     page = 0
     per_page = 25
     players = use_case.execute(page, per_page)
@@ -30,6 +31,7 @@ if __name__ == '__main__':
     players = use_case.execute(page, per_page)
     # logger.debug("Players retreived successfully: {}".format(players))
 
+    # Load to S3
     s3_storage = S3Storage(config.S3_BUCKET_NAME,
                            config.aws_access_key_id,
                            config.aws_secret_access_key)
