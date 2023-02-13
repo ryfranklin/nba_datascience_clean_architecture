@@ -16,3 +16,11 @@ To install the required packages, run the following command:
 
 This will install all the packages listed in the `requirements.txt` file. If you add any new dependencies to your project, run the following command to update the `requirements.txt` file:
 <code>$ pip freeze > requirements.txt</code>
+
+# Install the project in editable mode
+Install the project in editable mode with the following command:
+<code>$ pip install -e .</code>
+
+# Deactivating the virutal environment
+When you're done working with the project, you can deactivate the virtual environment with the following command:
+<code>$ deactivate</code>
